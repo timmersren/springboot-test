@@ -1,0 +1,16 @@
+#演示将配置文件中配置的每一个属性的值，映射到Person的bean中。
+#person:
+#  name: zhangSan
+#  age: 18
+#  boss: false
+#  birth: 2018/04/01
+#  maps:
+#    k1: v1
+#    k2: v2
+#  lists:
+#   - dog
+#   - cat
+#   - bird
+#  dog:
+#   name: wangwang
+#   age: 2
