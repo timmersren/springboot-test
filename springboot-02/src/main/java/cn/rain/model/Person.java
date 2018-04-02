@@ -1,14 +1,16 @@
 package cn.rain.model;
 
+import org.hibernate.validator.constraints.Email;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
+import org.springframework.validation.annotation.Validated;
 
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
 /**
- * description: 演示将配置文件中配置的每一个属性的值，映射到这个Person组件中。
+ * description: 演示通过@ConfigurationProperties的方式将配置文件中配置的每一个属性的值，映射到这个Person组件中：
  * 1.注解@ConfigurationProperties告诉SpringBoot将本类中的所有属性和配置文件中相关的配置进行绑定。
  * 2.prefix = "person"：配置文件中哪个下面的所有属性进行一一映射，@ConfigurationProperties(prefix = "person")
  * 默认从全局配置文件中获取值。
@@ -18,8 +20,11 @@ import java.util.Map;
  */
 @Component
 @ConfigurationProperties(prefix = "person")
+@Validated //使用@ConfigurationProperties的话支持JSR303数据校验
 public class Person {
     private String name;
+    @Email
+    private String email;
     private Integer age;
     private Boolean boss;
     private Date birth;
@@ -33,6 +38,14 @@ public class Person {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public Integer getAge() {
@@ -87,6 +100,7 @@ public class Person {
     public String toString() {
         return "Person{" +
                 "name='" + name + '\'' +
+                ", email='" + email + '\'' +
                 ", age=" + age +
                 ", boss=" + boss +
                 ", birth=" + birth +
