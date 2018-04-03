@@ -7,6 +7,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.context.ApplicationContext;
 import org.springframework.test.context.junit4.SpringRunner;
 
 /**
@@ -23,6 +24,8 @@ public class Springboot02ApplicationTests {
 	private Person2 person2;
 	@Autowired
 	private Person3 person3;
+	@Autowired
+	ApplicationContext context;
 
 	@Test
 	public void contextLoads() {
@@ -40,5 +43,13 @@ public class Springboot02ApplicationTests {
 	public void testPerson3(){
 		System.out.println("========================================================");
 		System.out.println(person3.toString());
+	}
+
+
+	@Test
+	public void testIoc(){
+		// 测试helloService这个bean是否被加载到spring的ioc容器中
+		boolean b = context.containsBean("helloService1");
+		System.out.println(b);
 	}
 }
