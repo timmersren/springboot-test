@@ -2,6 +2,7 @@ package cn.rain.model;
 
 import org.hibernate.validator.constraints.Email;
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.annotation.Validated;
 
@@ -10,18 +11,17 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * description: 演示通过@ConfigurationProperties的方式将配置文件中配置的每一个属性的值，映射到这个Person组件中：
- * 1.注解@ConfigurationProperties告诉SpringBoot将本类中的所有属性和配置文件中相关的配置进行绑定。
- * 2.prefix = "person"：配置文件中哪个下面的所有属性进行一一映射，@ConfigurationProperties(prefix = "person")
- * 默认从全局配置文件中获取值。
- * 3.只有这个类是容器中的组件，才能使用容器提供的@ConfigurationProperties功能，因此该类需要进行@Component标注。
+ * description: @ConfigurationProperties默认是从全局配置文件中加载值并进行映射，
+ * 但是如果都配在全局配置文件中，将使得该文件集齐臃肿，因此我们从新定义person3.properties
+ * 通过@PropertiesSource注解加载该文件对Person这个bean进行映射。
  * @author 任伟
- * @date 2018/4/1 18:10
+ * @date 2018/4/3 9:46
  */
+@PropertySource(value = {"classpath:person3.properties"}) //从person3.properties中加载配置并注入到该bean中。
+@ConfigurationProperties(prefix = "person3")
+@Validated
 @Component
-@ConfigurationProperties(prefix = "person") //默认从全局配置文件中获取
-@Validated //使用@ConfigurationProperties的话支持JSR303数据校验
-public class Person {
+public class Person3 {
     private String name;
     @Email
     private String email;
@@ -98,7 +98,7 @@ public class Person {
 
     @Override
     public String toString() {
-        return "Person{" +
+        return "Person3{" +
                 "name='" + name + '\'' +
                 ", email='" + email + '\'' +
                 ", age=" + age +
