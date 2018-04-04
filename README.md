@@ -6,4 +6,8 @@
 
 ## springboot-02
 
-主要演示springboot的一些配置规则，如application.properties、application.yml。以及一些配置的细节
+主要演示springboot的一些配置规则，如application.properties、application.yml，以及一些配置的细节。
+
+## springboot-02-config2
+
+演示springboot的自动加载配置文件以及加载的优先级，外部加载等。
