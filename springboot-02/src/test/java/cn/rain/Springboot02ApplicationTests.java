@@ -50,6 +50,16 @@ public class Springboot02ApplicationTests {
 	public void testIoc(){
 		// 测试helloService这个bean是否被加载到spring的ioc容器中
 		boolean b = context.containsBean("helloService1");
-		System.out.println(b);
+		System.out.println("容器中是否包含helloService1：" + b);
+		// 测试@ImportResources是否能标注在任何一个配置类上（不只是主配置类）
+		boolean b2 = context.containsBean("testService");
+		System.out.println("容器中是否包含testService：" + b2);
+
+//		容器中是否包含helloService1：true
+//		容器中是否包含testService：true
+		// 测试结果显示@ImportResources只要标注在配置类上就能加载spring的xml配置文件。
+
+
+
 	}
 }

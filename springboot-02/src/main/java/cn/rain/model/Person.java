@@ -12,8 +12,8 @@ import java.util.Map;
 /**
  * description: 演示通过@ConfigurationProperties的方式将配置文件中配置的每一个属性的值，映射到这个Person组件中：
  * 1.注解@ConfigurationProperties告诉SpringBoot将本类中的所有属性和配置文件中相关的配置进行绑定。
- * 2.prefix = "person"：配置文件中哪个下面的所有属性进行一一映射，@ConfigurationProperties(prefix = "person")
- * 默认从全局配置文件中获取值。
+ * 2.prefix = "person"：由于我们的application.yml配置文件中有很多类别的配置，比如server、person等等，prefix属性
+ *   就是告诉spring boot要将配置文件中哪个类别的属性和这个组件中的属性进行一一映射，默认从全局配置文件中获取值。
  * 3.只有这个类是容器中的组件，才能使用容器提供的@ConfigurationProperties功能，因此该类需要进行@Component标注。
  * @author 任伟
  * @date 2018/4/1 18:10

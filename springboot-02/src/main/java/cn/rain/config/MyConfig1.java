@@ -3,6 +3,7 @@ package cn.rain.config;
 import cn.rain.service.HelloService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.ImportResource;
 
 /**
  * description: 注解@Configuration指明该类是一个配置类，该类就是用来替代原始的xml配置文件的。
@@ -11,6 +12,7 @@ import org.springframework.context.annotation.Configuration;
  * @date 2018/4/3 10:32
  */
 @Configuration
+@ImportResource(locations = {"classpath:beans.xml"})
 public class MyConfig1 {
 
     @Bean(name = "helloService1") // 可以使用name属性修改组件的id

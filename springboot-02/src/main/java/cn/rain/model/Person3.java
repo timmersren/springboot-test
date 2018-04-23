@@ -12,8 +12,8 @@ import java.util.Map;
 
 /**
  * description: @ConfigurationProperties默认是从全局配置文件中加载值并进行映射，
- * 但是如果都配在全局配置文件中，将使得该文件集齐臃肿，因此我们从新定义person3.properties
- * 通过@PropertiesSource注解加载该文件对Person这个bean进行映射。
+ * 但是如果都配在全局配置文件中，将使得该文件集齐臃肿，因此我们从新定义person3.properties。
+ * 通过@PropertiesSource注解的value属性设置配置文件的路径来加载该文件，对Person3这个bean进行映射。
  * @author 任伟
  * @date 2018/4/3 9:46
  */

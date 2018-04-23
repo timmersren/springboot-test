@@ -5,4 +5,8 @@
 
     <!--测试原始spring配置文件能否在Spring Boot中被加载-->
     <bean id="helloService" class="cn.rain.service.HelloService"/>
+
+    <!--测试@ImportResources注解除了标注在主配置类上，是否标注在任何配置类上都起作用-->
+    <bean id="testService" class="cn.rain.service.TestService"/>
+
 </beans>

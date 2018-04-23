@@ -10,7 +10,7 @@ import java.util.Map;
 /**
  * description: 演示使用@Value(该注解是Spring的底层注解)，为JavaBean注入属性，
  * 该注解类似于spring的xml配置文件<bean>标签下的<properties>子标签，
- * 故同样地@Value里面可以写字面量、${key}从配置文件获取值、#{SpEL}spring表达式。
+ * 在@Value里面可以写字面量、${key}从配置文件获取值、#{SpEL}spring表达式。
  * 这里总结下使用@ConfigurationProperties和@Value的区别：
  * 1.@ConfigurationProperties会批量注入配置文件中的属性，而@Value是一个个的注入。
  * 2.@ConfigurationProperties支持松散语法（例如lastName也可写成last-name），而@Value语法严格。

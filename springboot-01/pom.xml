@@ -8,13 +8,16 @@
     <artifactId>springboot-01</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <!--我们的spring boot依赖的pom.xml-->
+    <!--继承spring-boot-starter-parent为了使用springboot对依赖的版本仲裁-->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>1.5.9.RELEASE</version>
     </parent>
+
     <dependencies>
+        <!--springboot将不同的场景做成了不同的starters，这里我们进行web开发，
+            就导入web的starters-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>

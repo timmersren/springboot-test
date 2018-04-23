@@ -1,3 +1,4 @@
+
 #演示将配置文件中配置的每一个属性的值，映射到Person的bean中。
 #person:
 #  name: zhangSan
@@ -7,10 +8,12 @@
 #  maps:
 #    k1: v1
 #    k2: v2
+## Map的行内写法
+## maps: {k1: v1, k2: v2}
 #  lists:
 #   - dog
 #   - cat
 #   - bird
 #  dog:
-#   name: wangwang
+#   name: 大白罴
 #   age: 2
