@@ -11,3 +11,7 @@
 ## springboot-02-config2
 
 演示springboot的自动加载配置文件以及加载的优先级，外部加载等。
+
+## springboot-02-config3
+
+讲解springboot自动配置的原理。
