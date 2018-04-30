@@ -22,3 +22,6 @@
 3. 讲解了spring boot中日志框架（slf4j+logback）的使用。
 4. 讲解了如何在spring boot中使用自定义的日志配置文件以及日志profile高级功能。
 5. 讲解了spring boot中如何由默认logback实现切换成其他的日志框架实现。
+
+## springboot-04-web01
+spring boot的web开发
