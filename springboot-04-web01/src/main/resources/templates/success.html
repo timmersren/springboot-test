@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>thymeleaf试验成功！</h1>
+    <!--
+	th:text 将div里面的文本内容设置为我们指定的值，这里我们通过${hello}指定为
+	域属性中map的key即“你好”，如果我们不使用模板引擎，页面中会显示<div>标签中
+	的“这是显示欢迎信息”，使用模板引擎后会替换为后端传来的值。
+	-->
+    <div id="div1" th:id="${hello}" th:text="${hello}">这是显示欢迎信息</div>
+
+    <hr/>
+    <!--th:text 转义特殊字符； th: utext 不转义特殊字符-->
+    <div th:text="${hello}"></div>
+    <div th:utext="${hello}"></div>
+
+    <hr/>
+    <!-- 注意th:each每次遍历都会生成它当前这个标签，由于users集合中由3个元素，故会生成3个h4标签 -->
+    <h4 th:text="${user}" th:each="user : ${users}"></h4>
+    <hr/>
+    <!--比较上面的each，这里会生成1个h4标签，3个span标签-->
+    <h4>
+        <!--
+        如果我们不想使用th:text进行取值，而是想在标签内直接获取，
+        需要按照语法规定加[[ ... ]]，这就相当于th:text 会转义特殊字符；
+        另外 [(...)]，相当于th:utext 不会转义特殊字符。
+        -->
+        <span th:each="user:${users}"> [[${user}]] </span>
+    </h4>
+</body>
+</html>

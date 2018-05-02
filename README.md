@@ -25,3 +25,9 @@
 
 ## springboot-04-web01
 spring boot的web开发
+1. 静态资源映射
+2. Thymeleaf模板引擎的介绍与使用
+3. SpringMVC自动配置原理
+4. 登录国家化
+5. 拦截器进行登录检查
+6. Restful风格的CRUD开发试验

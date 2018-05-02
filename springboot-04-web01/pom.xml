@@ -22,6 +22,12 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
+ 		<!--由于2.1.6版本过低，因此我们需要切换为更高的版本，在POM的properties标签中做如下配置即可切换为3.0.9版本-->
+        <thymeleaf.version>3.0.9.RELEASE</thymeleaf.version>
+        <!--下面是开启布局功能的支持程序-->
+        <!--注：如果是thymeleaf3，应该适配layout2及以上版本-->
+        <!--如果是thymeleaf2，应该适配layout1及以上版本-->
+        <thymeleaf-layout-dialect.version>2.2.2</thymeleaf-layout-dialect.version>
     </properties>
 
     <dependencies>
@@ -42,6 +48,18 @@
             <groupId>org.webjars</groupId>
             <artifactId>jquery</artifactId>
             <version>3.3.1</version>
+        </dependency>
+        <!--引入BootStrap的jar形式-->
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>bootstrap</artifactId>
+            <version>4.0.0</version>
+        </dependency>
+
+        <!--引入thymeleaf模板引擎的启动器-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
     </dependencies>
 
