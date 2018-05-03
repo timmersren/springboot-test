@@ -68,10 +68,11 @@ public class MyMvcConfigurer extends WebMvcConfigurerAdapter {
         };
     }
 
-    // 添加我们自己配置的区域信息解析器组件，从而替换spring boot默认的区域解析器
+    /**
+     * 添加我们自己配置的区域信息解析器组件，从而替换spring boot默认的区域解析器。
+     */
     @Bean
     public LocaleResolver localeResolver(){
         return new MyLocaleResolver();
     }
-
 }
