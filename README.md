@@ -32,3 +32,7 @@ spring boot的web开发
 5. 拦截器进行登录检查
 6. Restful风格的CRUD开发试验
 7. 错误处理机制
+8. 嵌入式Servlet容器
+
+## springboot-04-web02
+主要演示使用外置的Servlet容器及其启动原理
