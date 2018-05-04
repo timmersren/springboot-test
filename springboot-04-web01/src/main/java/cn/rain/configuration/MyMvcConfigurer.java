@@ -62,8 +62,8 @@ public class MyMvcConfigurer extends WebMvcConfigurerAdapter {
                 // 但是排除掉登录页面（主页）和提交登录表单的请求。
                 // 另外，以前我们使用SpringMVC的时候还要对css、js等静态资源进行排除，但是这里spring boot已经对
                 // 静态资源进行了映射，所以我们不需要再进行配置。
-                registry.addInterceptor(new LoginHandlerInterceptor()).addPathPatterns("/**")
-                        .excludePathPatterns("/index.html", "/", "/user/login");
+//                registry.addInterceptor(new LoginHandlerInterceptor()).addPathPatterns("/**")
+//                        .excludePathPatterns("/index.html", "/", "/user/login");
             }
         };
     }

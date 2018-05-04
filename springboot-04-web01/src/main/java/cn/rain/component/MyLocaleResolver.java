@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.Locale;
 
 /**
- * description: 编写自己的区域信息解析器，不是用spring boot默认的（根据请求头Accept-Language）来获取。
+ * description: 编写自己的区域信息解析器，不使用spring boot默认的（根据请求头Accept-Language）来获取。
  * 自己的区域信息解析器可以通过点击页面最下方的超链接来改变中英文。
  *
  * @author 任伟

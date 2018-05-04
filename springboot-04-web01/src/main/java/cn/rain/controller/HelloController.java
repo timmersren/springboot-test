@@ -1,7 +1,9 @@
 package cn.rain.controller;
 
+import cn.rain.exception.UserNotExistException;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -30,7 +32,11 @@ public class HelloController {
 
     @RequestMapping("/hello")
     @ResponseBody
-    public String hello(){
+    public String hello(@RequestParam("user") String user){
+        // 为了测试返回自定义错误的json数据，故在此抛出异常
+        if (user.equals("aaa")){
+            throw new UserNotExistException();
+        }
         return "hello world !";
     }
 
