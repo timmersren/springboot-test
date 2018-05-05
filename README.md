@@ -36,3 +36,7 @@ spring boot的web开发
 
 ## springboot-04-web02
 主要演示使用外置的Servlet容器及其启动原理
+
+## springboot-06-data01-jdbc
+由于第五章是docker的内容，没有代码，因此没有springboot-05
+演示springboot的数据访问--jdbc。
