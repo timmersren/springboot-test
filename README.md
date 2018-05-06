@@ -44,3 +44,6 @@ spring boot的web开发
 
 ## springboot-06-data02-mybatis
 演示spring boot整合mybatis
+
+## springboot-07
+spring boot的启动配置原理
