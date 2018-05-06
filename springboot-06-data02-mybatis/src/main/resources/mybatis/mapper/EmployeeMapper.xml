@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--mapper的sql映射文件-->
+<mapper namespace="cn.rain.mapper.EmployeeMapper">
+    <select id="getEmpById" parameterType="java.lang.Integer" resultType="cn.rain.bean.Employee">
+        SELECT * FROM employee WHERE id=#{id}
+    </select>
+</mapper>

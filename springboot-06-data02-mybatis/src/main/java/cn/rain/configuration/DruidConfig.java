@@ -15,11 +15,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * description: Druid数据源的配置类，让配置文件中配置的数据源相关的配置能映射到DruidDataSource中去。
- * 使用@ConfigurationProperties(prefix = "spring.datasource")注解就是为了让配置文件中以"spring.datasource"
- * 开头的配置能映射到我们给容器中添加的DruidDataSource这个组件中去。
+ * description:复制自springboot-06-data01-jdbc-->cn.rain.configuration.DruidConfig，详情查看该配置类。
  * @author 任伟
- * @date 2018/5/6 13:12
+ * @date 2018/5/6 14:43
  */
 @SuppressWarnings("all")
 @Configuration
@@ -30,11 +28,6 @@ public class DruidConfig {
         return new DruidDataSource();
     }
 
-    /**
-     * 配置Druid的监控,需要配置一个管理后台的Servlet（即StatViewServlet）和一个web监控的filter（即WebStatFilter）。
-     * 我们配置这个StatViewServlet的时候，还能给它配置一些属性例如登录的账号密码等，
-     * 这些属性都可以在StatViewServlet中及其父类ResourceServlet中找到。
-     */
     @Bean
     public ServletRegistrationBean statViewServlet(){
         // 传入要注册在容器中的Servlet，并且传入要处理哪些URL的请求
