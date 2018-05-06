@@ -1,0 +1,5 @@
+org.springframework.context.ApplicationContextInitializer=\
+cn.rain.listener.MyApplicationContextInitializer
+
+org.springframework.boot.SpringApplicationRunListener=\
+cn.rain.listener.MySpringApplicationRunListener
