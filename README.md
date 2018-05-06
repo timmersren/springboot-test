@@ -39,5 +39,8 @@ spring boot的web开发
 
 ## springboot-06-data01-jdbc
 由于第五章是docker的内容，没有代码，因此没有springboot-05
-1. 演示springboot的数据访问--jdbc。
+1. 演示spring boot的数据访问--jdbc。
 2. 将数据源替换为Druid。
+
+## springboot-06-data02-mybatis
+演示spring boot整合mybatis
