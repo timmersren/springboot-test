@@ -47,3 +47,12 @@ spring boot的web开发
 
 ## springboot-07
 spring boot的启动配置原理
+
+## wrain-spring-boot-starter
+自定义的starter，依赖wrain-spring-boot-starter-autoconfigurer自动配置模块
+
+## wrain-spring-boot-starter-autoconfigurer
+自定义starter的自动配置模块
+
+## springboot-08-starter-test
+测试自定义的starter
