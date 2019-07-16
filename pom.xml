@@ -10,5 +10,17 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>springboot-01</module>
+        <module>springboot-02</module>
+        <module>springboot-02-config2</module>
+        <module>springboot-02-config3</module>
+        <module>springboot-03-logging</module>
+        <module>springboot-04-web01</module>
+        <module>springboot-04-web02</module>
+        <module>springboot-06-data01-jdbc</module>
+        <module>springboot-06-data02-mybatis</module>
+        <module>springboot-07</module>
+        <module>springboot-08-starter-test</module>
+        <module>wrain-spring-boot-starter</module>
+        <module>wrain-spring-boot-starter-autoconfigurer</module>
     </modules>
 </project>
