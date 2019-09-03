@@ -19,8 +19,11 @@ import java.util.Map;
  * @date 2018/4/1 18:10
  */
 @Component
-@ConfigurationProperties(prefix = "person") //默认从全局配置文件中获取
-@Validated //使用@ConfigurationProperties的话支持JSR303数据校验
+//默认从全局配置文件中获取
+@ConfigurationProperties(prefix = "person")
+// 使用@ConfigurationProperties的话支持JSR303数据校验,比如下面的@Email校验属性必须是邮箱格式。
+// 但是如果不使用@ConfigurationProperties注解而是直接使用@Value，则该校验不生效，因为@Value不支持JSR303数据校验。
+@Validated
 public class Person {
     private String name;
     @Email
